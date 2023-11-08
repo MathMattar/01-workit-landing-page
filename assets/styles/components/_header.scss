@@ -1,0 +1,71 @@
+@import '../abstract/root';
+
+header {
+  background-image: url('../images/bg-header-mobile.svg');
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 66px;
+  padding: 32px 15.3px 156.71px 16px;
+
+  .header__background {
+    display: none;
+  }
+
+  .header__nav {
+    display: flex;
+    justify-content: space-between;
+
+    .nav__logo {
+      width: 95.76px;
+      height: 24.61px;
+    }
+
+    .nav__link {
+      color: white;
+      font-family: $default-family;
+      font-weight: 700;
+      line-height: 2;
+      letter-spacing: -0.16px;
+      text-decoration-color: $eucaplyptus;
+      text-decoration-thickness: 3px;
+      text-underline-offset: 8.5px;
+    }
+  }
+
+  .header__call-to-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    .call-to-action__title {
+      color: $white;
+      font-family: $heading-family;
+      font-size: 50px;
+      font-weight: 600;
+      line-height: 1;
+      text-align: center;
+
+      .call-to-action__title--highlight {
+        text-decoration: underline;
+        text-decoration-color: $eucaplyptus;
+        text-decoration-thickness: 3px;
+        text-underline-offset: 7.3px;
+      }
+    }
+
+    .call-to-action__button {
+      color: $purple;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 2;
+      letter-spacing: -0.16px;
+      text-align: center;
+      background-color: $eucaplyptus;
+      border: none;
+      padding: 11.5px 23.5px;
+      width: 133px;
+    }
+  }
+}
