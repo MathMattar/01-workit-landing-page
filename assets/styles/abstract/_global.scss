@@ -1,1 +1,6 @@
+@import './root';
 
+* {
+  box-sizing: border-box;
+  font-family: $default-family;
+}

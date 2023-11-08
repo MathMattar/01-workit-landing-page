@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+header {
+  background-image: url("../images/bg-header-mobile.svg");
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 66px;
+  padding: 32px 15.3px 156.71px 16px;
+}
+header .header__background {
+  display: none;
+}
+header .header__nav {
+  display: flex;
+  justify-content: space-between;
+}
+header .header__nav .nav__logo {
+  width: 95.76px;
+  height: 24.61px;
+}
+header .header__nav .nav__link {
+  color: white;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  line-height: 2;
+  letter-spacing: -0.16px;
+  text-decoration-color: rgb(68, 255, 161);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 8.5px;
+}
+header .header__call-to-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+header .header__call-to-action .call-to-action__title {
+  color: rgb(255, 255, 255);
+  font-family: "Fraunces", serif;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+}
+header .header__call-to-action .call-to-action__title .call-to-action__title--highlight {
+  text-decoration: underline;
+  text-decoration-color: rgb(68, 255, 161);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 7.3px;
+}
+header .header__call-to-action .call-to-action__button {
+  color: rgb(36, 5, 62);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 2;
+  letter-spacing: -0.16px;
+  text-align: center;
+  background-color: rgb(68, 255, 161);
+  border: none;
+  padding: 11.5px 23.5px;
+  width: 133px;
+}
+
+main .copywriting {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-image: url(../images/bg-main-mobile.svg);
+  padding: 155.29px 16.3px 71.71px 16px;
+}
+main .copywriting .copywriting__background {
+  position: absolute;
+  display: flex;
+  background: url(../images/image-hero.webp) no-repeat center center/320px 182px;
+  top: 389px;
+  left: 36px;
+  width: 320px;
+  height: 184px;
+  z-index: 2;
+}
+main .copywriting .copywriting__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+main .copywriting .copywriting__content .copywriting__id {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(36, 5, 62);
+  font-family: "Fraunces", serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.8;
+  border: 1px solid rgb(88, 77, 98);
+  border-radius: 30.5px;
+  width: 48px;
+  height: 46px;
+}
+main .copywriting .copywriting__content .copywriting__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+main .copywriting .copywriting__content .copywriting__item .item__title {
+  color: rgb(36, 5, 62);
+  font-family: "Fraunces", serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+}
+main .copywriting .copywriting__content .copywriting__item .item__description {
+  color: rgb(88, 77, 98);
+  font-size: 16px;
+  line-height: 1.75;
+  text-align: center;
+}
+
+main .founder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100.29px 16px 0;
+}
+main .founder .founder__image {
+  background: url(../images/image-founder.webp) no-repeat center 0px/281px 281px;
+  width: 281px;
+  height: 228px;
+}
+main .founder .founder__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(36, 5, 62);
+  padding: 32px 31px;
+  color: rgb(255, 255, 255);
+}
+main .founder .founder__content .content__title {
+  font-family: "Fraunces", serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+main .founder .founder__content .content__description {
+  font-weight: 400;
+  line-height: 1.75;
+  text-align: center;
+  padding: 16px 0 24px;
+}/*# sourceMappingURL=style.css.map */
