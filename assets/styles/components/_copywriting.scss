@@ -2,64 +2,26 @@
 
 main {
   .copywriting {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    background-image: url(../images/background-mobile-main.svg);
-    padding: 155.29px 16.3px 71.71px 16px;
+    @include display(null, null, space-between, null, 26px);
+    padding: 255px 165px 172px 161px;
 
-    .copywriting__background {
-      position: absolute;
-      display: flex;
-      background: url(../images/image-hero.webp) no-repeat center center / 320px 182px;
-      top: 389px;
-      left: 36px;
-      width: 320px;
-      height: 184px;
+    .copywriting__item {
+      @include display(column, null, null, center);
+      position: relative;
+      width: 100%;
       z-index: 2;
-    }
-
-    .copywriting__content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 24px;
 
       .copywriting__id {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: $purple;
-        font-family: $heading-family;
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 1.8;
-        border: 1px solid $grey;
-        border-radius: 30.5px;
-        width: 48px;
-        height: 46px;
+        @include copywriting-id;
       }
 
-      .copywriting__item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
+      .copywriting__title {
+        @include small-heading;
+        padding: 56px 0 28px;
+      }
 
-        .item__title {
-          color: $purple;
-          font-family: $heading-family;
-          font-size: 28px;
-          font-weight: 600;
-          line-height: 36px;
-        }
-
-        .item__description {
-          color: $grey;
-          font-size: 16px;
-          line-height: 1.75;
-          text-align: center;
-        }
+      .copywriting__description {
+        text-align: center;
       }
     }
   }

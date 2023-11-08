@@ -1,180 +1,240 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;700&display=swap");
 * {
   box-sizing: border-box;
+}
+
+body {
   font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 400;
+  color: rgb(36, 5, 62);
+  background-color: rgb(255, 255, 255);
+}
+
+header,
+main {
+  position: relative;
+  z-index: 2;
+}
+
+.background {
+  position: absolute;
+}
+
+.background--header {
+  background: url("../images/background-header.svg") no-repeat center/100% 730px;
+  width: 100%;
+  height: 730px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.background--left {
+  background: url("../images/background-header-pattern-1.svg") no-repeat center/339.64px 316.82px;
+  width: 339.64px;
+  height: 316.82px;
+  top: 116.12px;
+  left: -138.27px;
+  z-index: 2;
+}
+
+.background--right {
+  background: url("../images/background-header-pattern-2.svg") no-repeat center/172.68px 180.5px;
+  width: 172.68px;
+  height: 180.5px;
+  top: 314.07px;
+  left: 1315.4px;
+  z-index: 2;
+}
+
+.background--smartphone {
+  background: url("../images/image-hero.webp") no-repeat center/767px 441px;
+  width: 767px;
+  height: 441px;
+  top: 454px;
+  left: 361px;
+  z-index: 2;
+}
+
+.background--copywriting {
+  background: url("../images/background-main.svg") no-repeat center/100% 960px;
+  width: 100%;
+  height: 960px;
+  top: 505px;
+  left: 0;
+  z-index: 0;
+}
+
+.background--founder {
+  background: url("../images/background-main-pattern-1.svg") no-repeat center/220.29px 211.45px;
+  width: 220.29px;
+  height: 211.45px;
+  top: 2010.29px;
+  left: 982.01px;
+  z-index: 3;
 }
 
 .button {
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 400;
   color: rgb(36, 5, 62);
-  font-size: 16px;
   font-weight: 700;
-  line-height: 2;
-  letter-spacing: -0.16px;
+  letter-spacing: -0.18px;
   text-align: center;
+  color: rgb(36, 5, 62);
   background-color: rgb(68, 255, 161);
-  border: none;
+  border: 2px solid rgb(68, 255, 161);
   cursor: pointer;
 }
 .button:hover {
-  color: rgb(68, 255, 161);
   background-color: transparent;
-  border: 2px solid rgb(68, 255, 161);
+  color: rgb(68, 255, 161);
 }
 
 header {
-  background-image: url("../images/background-mobile-header.svg");
   display: flex;
   flex-direction: column;
-  align-content: center;
-  gap: 66px;
-  padding: 32px 15.3px 156.71px 16px;
+  gap: 58px;
+  padding: 56px 165px 326px 165.35px;
 }
-header .header__background {
-  display: none;
+header .container {
+  width: 100%;
 }
 header .header__nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-header .header__nav .nav__logo {
-  width: 95.76px;
-  height: 24.61px;
+header .header__nav .container {
+  width: 100%;
 }
 header .header__nav .nav__link {
-  color: white;
-  font-family: "Manrope", sans-serif;
-  font-weight: 700;
-  line-height: 2;
-  letter-spacing: -0.16px;
+  text-decoration: underline;
   text-decoration-color: rgb(68, 255, 161);
   text-decoration-thickness: 3px;
-  text-underline-offset: 8.5px;
+  text-underline-offset: 9.6px;
+  color: rgb(255, 255, 255);
+}
+header .header__nav .nav__link:hover {
+  background-color: transparent;
+  color: rgb(68, 255, 161);
 }
 header .header__call-to-action {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 37px;
+}
+header .header__call-to-action .container {
+  width: 100%;
 }
 header .header__call-to-action .call-to-action__title {
-  color: rgb(255, 255, 255);
-  font-family: "Fraunces", serif;
-  font-size: 50px;
+  font-family: "Fraunces 144pt", serif;
+  font-size: 80px;
+  line-height: 80px;
   font-weight: 600;
-  line-height: 1;
   text-align: center;
+  color: rgb(255, 255, 255);
+  width: 635px;
 }
 header .header__call-to-action .call-to-action__title .call-to-action__title--highlight {
   text-decoration: underline;
   text-decoration-color: rgb(68, 255, 161);
   text-decoration-thickness: 3px;
-  text-underline-offset: 7.3px;
+  text-underline-offset: 13px;
 }
 header .header__call-to-action .call-to-action__button {
-  width: 133px;
-  height: 55px;
+  padding: 11px 30.6px 14px;
 }
 
 main .copywriting {
   display: flex;
-  flex-direction: column;
-  gap: 40px;
-  background-image: url(../images/background-mobile-main.svg);
-  padding: 155.29px 16.3px 71.71px 16px;
+  justify-content: space-between;
+  gap: 26px;
+  padding: 255px 165px 172px 161px;
 }
-main .copywriting .copywriting__background {
-  position: absolute;
+main .copywriting .container {
+  width: 100%;
+}
+main .copywriting .copywriting__item {
   display: flex;
-  background: url(../images/image-hero.webp) no-repeat center center/320px 182px;
-  top: 389px;
-  left: 36px;
-  width: 320px;
-  height: 184px;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
   z-index: 2;
 }
-main .copywriting .copywriting__content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
+main .copywriting .copywriting__item .container {
+  width: 100%;
 }
-main .copywriting .copywriting__content .copywriting__id {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgb(36, 5, 62);
-  font-family: "Fraunces", serif;
-  font-size: 20px;
+main .copywriting .copywriting__item .copywriting__id {
+  font-family: "Fraunces 144pt", serif;
+  font-size: 24px;
+  line-height: 40px;
   font-weight: 600;
-  line-height: 1.8;
+  text-align: center;
+  color: rgb(36, 5, 62);
   border: 1px solid rgb(88, 77, 98);
   border-radius: 30.5px;
-  width: 48px;
-  height: 46px;
+  padding: 7.34px 21.34px;
 }
-main .copywriting .copywriting__content .copywriting__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-}
-main .copywriting .copywriting__content .copywriting__item .item__title {
-  color: rgb(36, 5, 62);
-  font-family: "Fraunces", serif;
-  font-size: 28px;
+main .copywriting .copywriting__item .copywriting__title {
+  font-family: "Fraunces 144pt", serif;
+  font-size: 32px;
+  line-height: 40px;
   font-weight: 600;
-  line-height: 36px;
+  text-align: center;
+  color: rgb(36, 5, 62);
+  padding: 56px 0 28px;
 }
-main .copywriting .copywriting__content .copywriting__item .item__description {
-  color: rgb(88, 77, 98);
-  font-size: 16px;
-  line-height: 1.75;
+main .copywriting .copywriting__item .copywriting__description {
   text-align: center;
 }
 
 main .founder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 100.29px 16px 0;
+  position: relative;
+  padding: 282px 165px 121.78px 545px;
 }
-main .founder .founder__image {
-  background: url(../images/image-founder.webp) no-repeat center 0px/281px 281px;
-  width: 281px;
-  height: 228px;
+main .founder .founder__photo {
+  position: absolute;
+  background: url("../images/image-founder.webp") no-repeat center/477px 477px;
+  width: 477px;
+  height: 477px;
+  top: 109px;
+  left: 163px;
+  z-index: 1;
 }
 main .founder .founder__content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  gap: 32px;
+  position: relative;
   background-color: rgb(36, 5, 62);
-  padding: 32px 31px;
-  color: rgb(255, 255, 255);
+  padding: 64px;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+main .founder .founder__content .container {
+  width: 100%;
 }
 main .founder .founder__content .content__title {
-  font-family: "Fraunces", serif;
-  font-size: 32px;
+  font-family: "Fraunces 144pt", serif;
+  font-size: 56px;
+  line-height: 64px;
   font-weight: 600;
-  line-height: 1.5;
+  color: rgb(255, 255, 255);
 }
 main .founder .founder__content .content__description {
-  font-weight: 400;
-  line-height: 1.75;
-  text-align: center;
-  padding: 16px 0 24px;
+  color: rgb(255, 255, 255);
 }
 main .founder .founder__content .content__button {
-  width: 172px;
-  height: 55px;
-}
-main .founder .founder__background {
-  display: none;
+  padding: 11px 23.35px 14px;
 }
 
 footer {
@@ -182,7 +242,10 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 57.62px;
-  padding: 74px 129.5px 63.78px;
+  padding: 0 663px 110px 661px;
+}
+footer .container {
+  width: 100%;
 }
 footer .footer__logo {
   width: 95.76px;
@@ -193,6 +256,12 @@ footer .footer__nav {
   justify-content: space-between;
   width: 100%;
 }
-footer .footer__nav svg:hover path {
+footer .footer__nav .container {
+  width: 100%;
+}
+footer .footer__nav .nav__link {
+  height: 20px;
+}
+footer .footer__nav .nav__link svg:hover path {
   fill: rgb(36, 5, 62);
 }/*# sourceMappingURL=style.css.map */
