@@ -5,39 +5,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./assets/styles/style.css">
+
   <link rel="shortcut icon" href="./assets/images/favicon-32x32.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="./assets/styles/style.css">
 
   <title>Workit</title>
 </head>
 
 <body>
   <header>
-    <div class="header-pattern--right" aria-label="Set of five angled circles for composing the header background">
+    <div class="header__background header__background--right"
+      aria-label="Set of five angled circles for composing the header background">
     </div>
-    <div class="header-pattern--left" aria-label="Set of five angled circles for composing the header background"></div>
+    <div class="header__background header__background--left"
+      aria-label="Set of five angled circles for composing the header background"></div>
 
-    <nav class="header-nav">
-      <figure class="header-nav__image">
-        <img src="./assets/images/logo-light.svg" alt="Logo Workit">
-      </figure>
-      <a class="header-nav__link" href="#">Apply for access</a>
-    </nav>
+    <div class="header__nav">
+      <img class="nav__logo" src="./assets/images/logo-light.svg" alt="Logo Workit">
+      <a class="nav__link" href="#">Apply for access</a>
+    </div>
 
-    <h1 class="large-heading">Data <span>tailored</span> to your needs</h1>
-    <button class="header__button">Learn more</button>
-
-    <div class="header-smarphone"
-      aria-label="A smartphone splits the sessions of the page, its screen displays two rectangular elements to represent the workit application.">
+    <div class="header__call-to-action">
+      <h1 class="call-to-action__title">Data <span
+          class="call-to-action__title call-to-action__title--highlight">tailored</span> to your needs.</h1>
+      <button class="call-to-action__button">Learn more</button>
     </div>
   </header>
 
   <main>
     <section class="copywriting">
-
+      <div class="copywriting__background"
+        aria-label="A smartphone splits the sessions of the page, its screen displays two rectangular elements to represent the workit application.">
+      </div>
       <div class="copywriting__content">
         <h4 class="copywriting__id">1</h4>
         <div class="copywriting__item">
@@ -70,16 +73,17 @@
     </section>
 
     <section class="founder">
-      <img src="./assets/images/image-founder.webp"
-        alt="A photograph of a white man with wavy brown hair and a short beard, wearing glasses and a green floral shirt against a circular green background.">
+      <div class="founder__image"
+        aria-label="A photograph of a white man with wavy brown hair and a short beard, wearing glasses and a green floral shirt against a circular green background.">
+      </div>
       <section class="founder__content">
-        <h2 class="founder__title">Be the first to test</h2>
-        <p class="founder__description">Hi, I'm Louis Graham, the founder of the company. Book a demo call with me to
+        <h2 class="content__title">Be the first to test</h2>
+        <p class="content__description">Hi, I'm Louis Graham, the founder of the company. Book a demo call with me to
           become a beta tester for our
           app and kickstart your company. Apply for access below and I'll be in touch to schedule a call.</p>
-        <button class="founder__button">Apply for access</button>
+        <button class="content__button">Apply for access</button>
       </section>
-      <div class="founder-pattern"
+      <div class="founder-background"
         aria-label="Set of five angled circles to make up the background of the founder's text box"></div>
     </section>
   </main>
