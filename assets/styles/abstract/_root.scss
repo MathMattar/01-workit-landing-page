@@ -1,17 +1,115 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;700&display=swap');
-
-$heading-family: 'Fraunces', serif;
-$default-family: 'Manrope', sans-serif;
-$font-large: 80px;
-$font-medium: 56px;
-$font-small: 32px;
-$font-default: 18px;
-$line-large: 80px;
-$line-medium: 64px;
-$line-small: 40px;
-
-$purple: rgb(36, 5, 62);
-$ghost-white: rgb(253, 250, 255);
+$default: 'Manrope', sans-serif;
+$heading: 'Fraunces 144pt', serif;
 $white: rgb(255, 255, 255);
-$eucaplyptus: rgb(68, 255, 161);
 $grey: rgb(88, 77, 98);
+$purple: rgb(36, 5, 62);
+$eucaplyptus: rgb(68, 255, 161);
+
+@mixin text {
+  font-family: $default;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 400;
+  color: $purple;
+}
+
+@mixin large-heading {
+  font-family: $heading;
+  font-size: 80px;
+  line-height: 80px;
+  font-weight: 600;
+  text-align: center;
+  color: $white;
+}
+
+@mixin medium-heading {
+  font-family: $heading;
+  font-size: 56px;
+  line-height: 64px;
+  font-weight: 600;
+  color: $white;
+}
+
+@mixin small-heading {
+  font-family: $heading;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+  text-align: center;
+  color: $purple;
+}
+
+@mixin display($flex-direction: null, $align-content: null, $justify-content: null, $align-items: null, $gap: null) {
+  display: flex;
+
+  @if $flex-direction {
+    flex-direction: $flex-direction;
+  }
+
+  @if $align-content {
+    align-content: $align-content;
+  }
+
+  @if $justify-content {
+    justify-content: $justify-content;
+  }
+
+  @if $align-items {
+    align-items: $align-items;
+  }
+
+  @if $gap {
+    gap: $gap;
+  }
+
+  .container {
+    width: 100%;
+  }
+}
+
+@mixin underline ($offset) {
+  text-decoration: underline;
+  text-decoration-color: $eucaplyptus;
+  text-decoration-thickness: 3px;
+  text-underline-offset: $offset;
+}
+
+@mixin copywriting-id {
+  font-family: $heading;
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 600;
+  text-align: center;
+  color: $purple;
+  border: 1px solid $grey;
+  border-radius: 30.5px;
+  padding: 7.34px 21.34px;
+}
+
+@mixin background ($url, $width, $height) {
+  background: url($url) no-repeat center / $width $height;
+  width: $width;
+  height: $height;
+}
+
+@mixin position ($top, $left, $z-index) {
+  top: $top;
+  left: $left;
+  z-index: $z-index;
+}
+
+@mixin button {
+  @include text;
+  font-weight: 700;
+  letter-spacing: -0.18px;
+  text-align: center;
+  color: $purple;
+  background-color: $eucaplyptus;
+  border: 2px solid $eucaplyptus;
+  cursor: pointer;
+}
+
+@mixin hover {
+  background-color: transparent;
+  color: $eucaplyptus;
+}
