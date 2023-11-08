@@ -1,7 +1,7 @@
 @import '../abstract/root';
 
 header {
-  background-image: url('../images/bg-header-mobile.svg');
+  background-image: url('../images/background-mobile-header.svg');
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -56,16 +56,8 @@ header {
     }
 
     .call-to-action__button {
-      color: $purple;
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 2;
-      letter-spacing: -0.16px;
-      text-align: center;
-      background-color: $eucaplyptus;
-      border: none;
-      padding: 11.5px 23.5px;
       width: 133px;
+      height: 55px;
     }
   }
 }

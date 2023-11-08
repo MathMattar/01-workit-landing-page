@@ -3,13 +3,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;700&display=swap");
 * {
   box-sizing: border-box;
   font-family: "Manrope", sans-serif;
 }
 
+.button {
+  color: rgb(36, 5, 62);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 2;
+  letter-spacing: -0.16px;
+  text-align: center;
+  background-color: rgb(68, 255, 161);
+  border: none;
+  cursor: pointer;
+}
+.button:hover {
+  color: rgb(68, 255, 161);
+  background-color: transparent;
+  border: 2px solid rgb(68, 255, 161);
+}
+
 header {
-  background-image: url("../images/bg-header-mobile.svg");
+  background-image: url("../images/background-mobile-header.svg");
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -58,23 +77,15 @@ header .header__call-to-action .call-to-action__title .call-to-action__title--hi
   text-underline-offset: 7.3px;
 }
 header .header__call-to-action .call-to-action__button {
-  color: rgb(36, 5, 62);
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 2;
-  letter-spacing: -0.16px;
-  text-align: center;
-  background-color: rgb(68, 255, 161);
-  border: none;
-  padding: 11.5px 23.5px;
   width: 133px;
+  height: 55px;
 }
 
 main .copywriting {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  background-image: url(../images/bg-main-mobile.svg);
+  background-image: url(../images/background-mobile-main.svg);
   padding: 155.29px 16.3px 71.71px 16px;
 }
 main .copywriting .copywriting__background {
@@ -157,4 +168,31 @@ main .founder .founder__content .content__description {
   line-height: 1.75;
   text-align: center;
   padding: 16px 0 24px;
+}
+main .founder .founder__content .content__button {
+  width: 172px;
+  height: 55px;
+}
+main .founder .founder__background {
+  display: none;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 57.62px;
+  padding: 74px 129.5px 63.78px;
+}
+footer .footer__logo {
+  width: 95.76px;
+  height: 24.61px;
+}
+footer .footer__nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+footer .footer__nav svg:hover path {
+  fill: rgb(36, 5, 62);
 }/*# sourceMappingURL=style.css.map */

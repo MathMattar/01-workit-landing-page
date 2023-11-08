@@ -35,9 +35,14 @@ main {
         padding: 16px 0 24px;
       }
 
-      .content__button {}
+      .content__button {
+        width: 172px;
+        height: 55px;
+      }
     }
 
-    .founder__background {}
+    .founder__background {
+      display: none;
+    }
   }
 }

@@ -1,0 +1,25 @@
+@import '../abstract/root';
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 57.62px;
+  padding: 74px 129.5px 63.78px;
+
+  .footer__logo {
+    width: 95.76px;
+    height: 24.61px;
+  }
+
+  .footer__nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    svg:hover path {
+      fill: $purple
+    }
+
+  }
+}
