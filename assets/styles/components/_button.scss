@@ -1,0 +1,19 @@
+@import '../abstract/root';
+
+.button {
+  color: $purple;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 2;
+  letter-spacing: -0.16px;
+  text-align: center;
+  background-color: $eucaplyptus;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    color: $eucaplyptus;
+    background-color: transparent;
+    border: 2px solid $eucaplyptus;
+  }
+}
