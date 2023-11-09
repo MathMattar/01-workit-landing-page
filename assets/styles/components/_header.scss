@@ -1,11 +1,30 @@
 @import '../abstract/root';
 
 header {
-  @include display (column, null, null, null, 58px);
+  @include background ('../images/background-header.svg', $align: top center, $position: relative);
+  @include display (column, $items: center, $gap: 58px);
   padding: 56px 165px 326px 165.35px;
+  z-index: 1;
+
+  &:before {
+    content: '';
+    width: 100%;
+    height: 85%;
+    @include background('../images/background-header-pattern-1.svg', $align: -138px 60px, $size: 340px 315px);
+    z-index: 2;
+  }
+
+  &:after {
+    content: '';
+    width: 100%;
+    height: 85%;
+    @include background ('../images/background-header-pattern-2.svg', $align: 103% 258px, $size: 172px 180px);
+    z-index: 2;
+  }
 
   .header__nav {
-    @include display(null, null, space-between, center);
+    @include display($justify: space-between, $items: center);
+    width: 100%;
 
     .nav__link {
       @include underline (9.6px);
@@ -18,11 +37,11 @@ header {
   }
 
   .header__call-to-action {
-    @include display(column, null, null, center, 37px);
+    @include display($direction: column, $items: center, $gap: 37px);
+    width: 100%;
 
     .call-to-action__title {
       @include large-heading;
-      width: 635px;
 
       .call-to-action__title--highlight {
         @include underline (13px);

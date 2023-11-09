@@ -8,14 +8,17 @@
 body {
   @include text;
   background-color: $white;
-}
-
-header,
-main {
-  position: relative;
-  z-index: 2;
+  width: 100vw;
 }
 
 .background {
   position: absolute;
+}
+
+.button {
+  @include button;
+
+  &:hover {
+    @include hover;
+  }
 }

@@ -1,28 +1,44 @@
 @import '../abstract/root';
 
+.background--smartphone {
+  width: 100vw;
+  height: 50%;
+  @include background ('../images/image-hero.webp', $align: center, $size: 767px 441px, $top: 50%);
+  z-index: 2;
+}
+
 main {
+  &:before {
+    content: '';
+    width: 100vw;
+    height: 110%;
+    @include background('../images/background-main.svg', $size: 100%, $top: 490px);
+    z-index: 0;
+  }
+
   .copywriting {
-    @include display(null, null, space-between, null, 26px);
-    padding: 255px 165px 172px 161px;
+    position: relative;
+    @include display(row, $wrap: wrap, $justify: space-between);
+    width: 100%;
+    padding: 255px 161px 171px 165px;
+  }
 
-    .copywriting__item {
-      @include display(column, null, null, center);
-      position: relative;
-      width: 100%;
-      z-index: 2;
+  .copywriting__item {
+    @include display(column, $items: center);
+    width: 354px;
 
-      .copywriting__id {
-        @include copywriting-id;
-      }
+    .copywriting__id {
+      @include copywriting-id;
+    }
 
-      .copywriting__title {
-        @include small-heading;
-        padding: 56px 0 28px;
-      }
+    .copywriting__title {
+      @include small-heading;
+      padding: 56px 0 28px;
 
-      .copywriting__description {
-        text-align: center;
-      }
+    }
+
+    .copywriting__description {
+      text-align: center;
     }
   }
 }

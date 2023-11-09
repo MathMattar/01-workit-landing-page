@@ -39,41 +39,6 @@ $eucaplyptus: rgb(68, 255, 161);
   color: $purple;
 }
 
-@mixin display($flex-direction: null, $align-content: null, $justify-content: null, $align-items: null, $gap: null) {
-  display: flex;
-
-  @if $flex-direction {
-    flex-direction: $flex-direction;
-  }
-
-  @if $align-content {
-    align-content: $align-content;
-  }
-
-  @if $justify-content {
-    justify-content: $justify-content;
-  }
-
-  @if $align-items {
-    align-items: $align-items;
-  }
-
-  @if $gap {
-    gap: $gap;
-  }
-
-  .container {
-    width: 100%;
-  }
-}
-
-@mixin underline ($offset) {
-  text-decoration: underline;
-  text-decoration-color: $eucaplyptus;
-  text-decoration-thickness: 3px;
-  text-underline-offset: $offset;
-}
-
 @mixin copywriting-id {
   font-family: $heading;
   font-size: 24px;
@@ -86,10 +51,61 @@ $eucaplyptus: rgb(68, 255, 161);
   padding: 7.34px 21.34px;
 }
 
-@mixin background ($url, $width, $height) {
-  background: url($url) no-repeat center / $width $height;
-  width: $width;
-  height: $height;
+@mixin display($direction: row, $wrap: null, $content: normal, $justify: normal, $items: normal, $gap: 0px) {
+  display: flex;
+
+  @if $direction {
+    flex-direction: $direction;
+  }
+
+  @if $wrap {
+    flex-wrap: $wrap;
+  }
+
+  @if $content {
+    align-content: $content;
+  }
+
+  @if $justify {
+    justify-content: $justify;
+  }
+
+  @if $items {
+    align-items: $items;
+  }
+
+  @if $gap {
+    gap: $gap;
+  }
+}
+
+@mixin underline ($offset) {
+  text-decoration: underline;
+  text-decoration-color: $eucaplyptus;
+  text-decoration-thickness: 3px;
+  text-underline-offset: $offset;
+}
+
+
+@mixin background ($url, $align: center, $size: 100%, $top: null, $position: absolute) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+
+  @if $position {
+    position: $position;
+  }
+
+  @if $align {
+    background-position: $align;
+  }
+
+  @if $size {
+    background-size: $size;
+  }
+
+  @if $top {
+    top: $top;
+  }
 }
 
 @mixin position ($top, $left, $z-index) {
