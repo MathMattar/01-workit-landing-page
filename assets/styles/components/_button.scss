@@ -1,9 +1,0 @@
-@import '../abstract/root';
-
-.button {
-  @include button;
-
-  &:hover {
-    @include hover;
-  }
-}
