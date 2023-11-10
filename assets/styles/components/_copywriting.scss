@@ -1,19 +1,12 @@
 @import '../abstract/root';
 
-.background--smartphone {
-  width: 100vw;
-  height: 50%;
-  @include background ('../images/image-hero.webp', $align: center, $size: 767px 441px, $top: 50%);
-  z-index: 2;
-}
-
 main {
   &:before {
     content: '';
-    width: 100vw;
+    @include background('../images/background-main.svg', $size: 100%);
+    @include index(0, $top: 490px);
+    width: 100%;
     height: 110%;
-    @include background('../images/background-main.svg', $size: 100%, $top: 490px);
-    z-index: 0;
   }
 
   .copywriting {
@@ -34,7 +27,6 @@ main {
     .copywriting__title {
       @include small-heading;
       padding: 56px 0 28px;
-
     }
 
     .copywriting__description {

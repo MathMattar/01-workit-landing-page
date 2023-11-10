@@ -51,7 +51,7 @@ $eucaplyptus: rgb(68, 255, 161);
   padding: 7.34px 21.34px;
 }
 
-@mixin display($direction: row, $wrap: null, $content: normal, $justify: normal, $items: normal, $gap: 0px) {
+@mixin display($direction: row, $wrap: null, $content: null, $justify: null, $items: null, $gap: 0px) {
   display: flex;
 
   @if $direction {
@@ -87,13 +87,8 @@ $eucaplyptus: rgb(68, 255, 161);
 }
 
 
-@mixin background ($url, $align: center, $size: 100%, $top: null, $position: absolute) {
-  background-image: url($url);
-  background-repeat: no-repeat;
-
-  @if $position {
-    position: $position;
-  }
+@mixin background ($url, $align: center, $size: 100%) {
+  background: url($url) no-repeat;
 
   @if $align {
     background-position: $align;
@@ -102,16 +97,22 @@ $eucaplyptus: rgb(68, 255, 161);
   @if $size {
     background-size: $size;
   }
+}
+
+@mixin index ($z-index, $position: absolute, $top: null, $left: null) {
+  z-index: $z-index;
+
+  @if $position {
+    position: $position;
+  }
 
   @if $top {
     top: $top;
   }
-}
 
-@mixin position ($top, $left, $z-index) {
-  top: $top;
-  left: $left;
-  z-index: $z-index;
+  @if $left {
+    left: $left;
+  }
 }
 
 @mixin button {

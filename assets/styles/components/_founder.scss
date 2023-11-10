@@ -2,21 +2,31 @@
 
 main {
   .founder {
-    position: relative;
-    padding: 282px 165px 121.78px 545px;
+    padding: 110px 161px 60px 11.58%;
 
     .founder__photo {
-      position: absolute;
-      @include background ('../images/image-founder.webp', 477px, 477px);
-      @include position (109px, 163px, 1);
+      @include index(2);
+      height: 53vh;
+
+      img {
+        height: 100%;
+      }
     }
 
     .founder__content {
-      @include display(column, null, null, flex-start, 32px);
-      position: relative;
       background-color: $purple;
+      @include index(3, relative);
+      width: 50vw;
       padding: 64px;
-      @include position (0, 0, 2);
+      margin: 173px 0 60px 382px;
+
+      &:after {
+        content: '';
+        @include background('../images/background-pattern-1.svg', bottom right, 220px 210px);
+        @include index(4, absolute, 60px, -70px);
+        width: 100%;
+        height: 100%;
+      }
 
       .content__title {
         @include medium-heading;
@@ -24,10 +34,11 @@ main {
 
       .content__description {
         color: $white;
+        padding: 32px 0;
       }
 
       .content__button {
-        padding: 11px 23.35px 14px;
+        padding: 13px 25px 16px;
       }
     }
   }
