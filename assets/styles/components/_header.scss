@@ -4,7 +4,7 @@ header {
   @include background ('../images/background-header.svg', top center);
   @include index(1, relative);
   @include display (column, $items: center, $gap: 58px);
-  height: 80vh;
+  height: 80.4vh;
   padding: 56px 165px 316px 165.35px;
 
   &:before {
@@ -54,4 +54,43 @@ header {
     }
   }
 
+}
+
+@include responsive("tablet", max) {
+  header {
+    background-size: cover;
+    height: 52.75vh;
+    padding: 32px 40px 203.25px;
+
+    &:before {
+      background-position: -227px 70px;
+    }
+
+    &:after {
+      background-position: 689px 250px;
+    }
+
+    .header__nav {
+      .nav__link {
+        letter-spacing: -0.16px;
+        text-underline-offset: 4px;
+      }
+    }
+
+    .header__call-to-action {
+      .call-to-action__title {
+        font-size: 60px;
+
+        .call-to-action__title--highlight {
+          text-underline-offset: 7.2px;
+        }
+      }
+
+      .call-to-action__button {
+        font-size: 16px;
+        letter-spacing: -0.16px;
+        padding: 9.5px 21.9px;
+      }
+    }
+  }
 }

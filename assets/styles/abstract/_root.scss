@@ -16,7 +16,7 @@ $eucaplyptus: rgb(68, 255, 161);
 @mixin large-heading {
   font-family: $heading;
   font-size: 80px;
-  line-height: 80px;
+  line-height: 1;
   font-weight: 600;
   text-align: center;
   color: $white;
@@ -51,7 +51,7 @@ $eucaplyptus: rgb(68, 255, 161);
   padding: 7.34px 21.34px;
 }
 
-@mixin display($direction: row, $wrap: null, $content: null, $justify: null, $items: null, $gap: 0px) {
+@mixin display($direction: row, $wrap: null, $content: null, $justify: null, $items: null, $gap: null) {
   display: flex;
 
   @if $direction {
@@ -87,7 +87,7 @@ $eucaplyptus: rgb(68, 255, 161);
 }
 
 
-@mixin background ($url, $align: center, $size: 100%) {
+@mixin background ($url, $align: center, $size: cover) {
   background: url($url) no-repeat;
 
   @if $align {
@@ -99,7 +99,7 @@ $eucaplyptus: rgb(68, 255, 161);
   }
 }
 
-@mixin index ($z-index, $position: absolute, $top: null, $left: null) {
+@mixin index ($z-index, $position: absolute, $top: null, $right: null, $bottom: null, $left: null) {
   z-index: $z-index;
 
   @if $position {
@@ -108,6 +108,14 @@ $eucaplyptus: rgb(68, 255, 161);
 
   @if $top {
     top: $top;
+  }
+
+  @if $right {
+    right: $right;
+  }
+
+  @if $bottom {
+    bottom: $bottom;
   }
 
   @if $left {
@@ -129,4 +137,29 @@ $eucaplyptus: rgb(68, 255, 161);
 @mixin hover {
   background-color: transparent;
   color: $eucaplyptus;
+}
+
+$breakpoints: (
+  "phone": 400px,
+  "phone-wide": 480px,
+  "phablet": 560px,
+  "tablet-small": 640px,
+  "tablet": 769px,
+  "tablet-wide": 1025px,
+  "desktop": 1248px,
+  "desktop-wide": 1440px
+);
+
+@mixin responsive ($width, $type: min) {
+  @if map\_has\_key($breakpoints, $width) {
+    $width: map\_get($breakpoints, $width);
+
+    @if $type ==max {
+      $width: $width - 1px;
+    }
+
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
 }

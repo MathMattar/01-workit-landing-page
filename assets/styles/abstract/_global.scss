@@ -20,13 +20,54 @@ body {
       height: 100%;
     }
   }
-}
 
+  &:before {
+    content: '';
+    @include background('../images/background-main.svg', $size: 100%);
+    @include index(0, $top: 490px);
+    width: 100%;
+    height: 110%;
+  }
+}
 
 .button {
   @include button;
 
   &:hover {
     @include hover;
+  }
+}
+
+main {
+  @include display (column, $items: center, $gap: 15.55em);
+  padding: 17.80% 161px 4.2% 171px;
+}
+
+
+@include responsive("tablet", max) {
+  body {
+    font-size: 16px;
+
+    .smartphone {
+      top: 392px;
+      width: 100%;
+      height: 28.9vh;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    &:before {
+      content: '';
+      @include background('../images/background-main.svg', $size: cover);
+      @include index(0, $top: 405px);
+      height: 89.9vh;
+    }
+
+    main {
+      padding: 203.75px 40px 80px;
+      gap: 205px;
+    }
   }
 }

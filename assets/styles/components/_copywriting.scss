@@ -1,36 +1,69 @@
 @import '../abstract/root';
 
 main {
-  &:before {
-    content: '';
-    @include background('../images/background-main.svg', $size: 100%);
-    @include index(0, $top: 490px);
-    width: 100%;
-    height: 110%;
-  }
-
   .copywriting {
     position: relative;
     @include display(row, $wrap: wrap, $justify: space-between);
     width: 100%;
-    padding: 255px 161px 171px 165px;
+    max-width: 1440px;
+
+
+    .copywriting__item {
+      @include display(column, $items: center);
+      width: 354px;
+
+      .copywriting__id {
+        @include copywriting-id;
+      }
+
+      .copywriting__title {
+        @include small-heading;
+        padding: 56px 0 28px;
+      }
+
+      .copywriting__description {
+        text-align: center;
+      }
+    }
   }
+}
 
-  .copywriting__item {
-    @include display(column, $items: center);
-    width: 354px;
+@include responsive("tablet", max) {
+  main {
+    .copywriting {
+      gap: 48px;
+      padding: 0 57px;
 
-    .copywriting__id {
-      @include copywriting-id;
-    }
+      .copywriting__item {
+        display: grid;
+        grid-template-areas:
+          "id title"
+          "id description";
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, auto);
+        column-gap: 32px;
+        row-gap: 16px;
+        width: 100%;
 
-    .copywriting__title {
-      @include small-heading;
-      padding: 56px 0 28px;
-    }
+        .copywriting__id {
+          grid-area: id;
+          margin-top: 45px;
+        }
 
-    .copywriting__description {
-      text-align: center;
+        .copywriting__title {
+          grid-area: title;
+          font-size: 28px;
+          line-height: 36px;
+          text-align: start;
+          padding: unset;
+        }
+
+        .copywriting__description {
+          grid-area: description;
+          line-height: 28px;
+          text-align: start;
+        }
+      }
     }
   }
 }

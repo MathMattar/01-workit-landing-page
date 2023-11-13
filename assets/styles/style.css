@@ -19,12 +19,22 @@ body .smartphone {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 0px;
   width: 100%;
   height: 49vh;
 }
 body .smartphone img {
   height: 100%;
+}
+body:before {
+  content: "";
+  background: url("../images/background-main.svg") no-repeat;
+  background-position: center;
+  background-size: 100%;
+  z-index: 0;
+  position: absolute;
+  top: 490px;
+  width: 100%;
+  height: 110%;
 }
 
 .button {
@@ -46,17 +56,52 @@ body .smartphone img {
   color: rgb(68, 255, 161);
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15.55em;
+  padding: 17.8% 161px 4.2% 171px;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  body .smartphone {
+    top: 392px;
+    width: 100%;
+    height: 28.9vh;
+  }
+  body .smartphone img {
+    height: 100%;
+  }
+  body:before {
+    content: "";
+    background: url("../images/background-main.svg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+    position: absolute;
+    top: 405px;
+    height: 89.9vh;
+  }
+  body main {
+    padding: 203.75px 40px 80px;
+    gap: 205px;
+  }
+}
 header {
   background: url("../images/background-header.svg") no-repeat;
   background-position: top center;
-  background-size: 100%;
+  background-size: cover;
   z-index: 1;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 58px;
-  height: 80vh;
+  height: 80.4vh;
   padding: 56px 165px 316px 165.35px;
 }
 header:before {
@@ -84,7 +129,6 @@ header .header__nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 0px;
   width: 100%;
 }
 header .header__nav .nav__link {
@@ -108,7 +152,7 @@ header .header__call-to-action {
 header .header__call-to-action .call-to-action__title {
   font-family: "Fraunces 144pt", serif;
   font-size: 80px;
-  line-height: 80px;
+  line-height: 1;
   font-weight: 600;
   text-align: center;
   color: rgb(255, 255, 255);
@@ -123,16 +167,33 @@ header .header__call-to-action .call-to-action__button {
   padding: 11px 30.6px 14px;
 }
 
-main:before {
-  content: "";
-  background: url("../images/background-main.svg") no-repeat;
-  background-position: center;
-  background-size: 100%;
-  z-index: 0;
-  position: absolute;
-  top: 490px;
-  width: 100%;
-  height: 110%;
+@media only screen and (max-width: 768px) {
+  header {
+    background-size: cover;
+    height: 52.75vh;
+    padding: 32px 40px 203.25px;
+  }
+  header:before {
+    background-position: -227px 70px;
+  }
+  header:after {
+    background-position: 689px 250px;
+  }
+  header .header__nav .nav__link {
+    letter-spacing: -0.16px;
+    text-underline-offset: 4px;
+  }
+  header .header__call-to-action .call-to-action__title {
+    font-size: 60px;
+  }
+  header .header__call-to-action .call-to-action__title .call-to-action__title--highlight {
+    text-underline-offset: 7.2px;
+  }
+  header .header__call-to-action .call-to-action__button {
+    font-size: 16px;
+    letter-spacing: -0.16px;
+    padding: 9.5px 21.9px;
+  }
 }
 main .copywriting {
   position: relative;
@@ -140,18 +201,16 @@ main .copywriting {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 0px;
   width: 100%;
-  padding: 255px 161px 171px 165px;
+  max-width: 1440px;
 }
-main .copywriting__item {
+main .copywriting .copywriting__item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0px;
   width: 354px;
 }
-main .copywriting__item .copywriting__id {
+main .copywriting .copywriting__item .copywriting__id {
   font-family: "Fraunces 144pt", serif;
   font-size: 24px;
   line-height: 40px;
@@ -162,7 +221,7 @@ main .copywriting__item .copywriting__id {
   border-radius: 30.5px;
   padding: 7.34px 21.34px;
 }
-main .copywriting__item .copywriting__title {
+main .copywriting .copywriting__item .copywriting__title {
   font-family: "Fraunces 144pt", serif;
   font-size: 32px;
   line-height: 40px;
@@ -171,17 +230,55 @@ main .copywriting__item .copywriting__title {
   color: rgb(36, 5, 62);
   padding: 56px 0 28px;
 }
-main .copywriting__item .copywriting__description {
+main .copywriting .copywriting__item .copywriting__description {
   text-align: center;
 }
 
+@media only screen and (max-width: 768px) {
+  main .copywriting {
+    gap: 48px;
+    padding: 0 57px;
+  }
+  main .copywriting .copywriting__item {
+    display: grid;
+    grid-template-areas: "id title" "id description";
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    -moz-column-gap: 32px;
+         column-gap: 32px;
+    row-gap: 16px;
+    width: 100%;
+  }
+  main .copywriting .copywriting__item .copywriting__id {
+    grid-area: id;
+    margin-top: 45px;
+  }
+  main .copywriting .copywriting__item .copywriting__title {
+    grid-area: title;
+    font-size: 28px;
+    line-height: 36px;
+    text-align: start;
+    padding: unset;
+  }
+  main .copywriting .copywriting__item .copywriting__description {
+    grid-area: description;
+    line-height: 28px;
+    text-align: start;
+  }
+}
 main .founder {
-  padding: 110px 161px 60px 11.58%;
+  width: 100%;
+  height: 72vh;
+  max-width: 1108px;
+  max-height: 650px;
+  position: relative;
 }
 main .founder .founder__photo {
   z-index: 2;
   position: absolute;
-  height: 53vh;
+  top: 0;
+  left: 0;
+  height: 477px;
 }
 main .founder .founder__photo img {
   height: 100%;
@@ -189,22 +286,23 @@ main .founder .founder__photo img {
 main .founder .founder__content {
   background-color: rgb(36, 5, 62);
   z-index: 3;
-  position: relative;
-  width: 50vw;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 730px;
+  max-width: 100%;
   padding: 64px;
-  margin: 173px 0 60px 382px;
 }
 main .founder .founder__content:after {
   content: "";
   background: url("../images/background-pattern-1.svg") no-repeat;
   background-position: bottom right;
-  background-size: 220px 210px;
+  background-size: cover;
   z-index: 4;
   position: absolute;
-  top: 60px;
-  left: -70px;
-  width: 100%;
-  height: 100%;
+  right: 72.7px;
+  width: 220.3px;
+  height: 211.45px;
 }
 main .founder .founder__content .content__title {
   font-family: "Fraunces 144pt", serif;
@@ -218,14 +316,42 @@ main .founder .founder__content .content__description {
   padding: 32px 0;
 }
 main .founder .founder__content .content__button {
-  padding: 13px 25px 16px;
+  padding: 11px 23.5px 14px;
 }
 
+@media only screen and (max-width: 768px) {
+  main .founder {
+    max-width: 690px;
+    max-height: 530px;
+  }
+  main .founder .founder__photo {
+    height: 281px;
+  }
+  main .founder .founder__content {
+    width: 514px;
+    height: 375px;
+    padding: 48px 56px 56px;
+  }
+  main .founder .founder__content:after {
+    right: 12.7px;
+  }
+  main .founder .founder__content .content__title {
+    font-size: 48px;
+    line-height: 56px;
+  }
+  main .founder .founder__content .content__description {
+    line-height: 28px;
+  }
+  main .founder .founder__content .content__button {
+    font-size: 16px;
+    letter-spacing: -0.16px;
+    padding: 9.5px 22.09px;
+  }
+}
 footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0px;
   width: 100%;
   margin-bottom: 110px;
 }
@@ -244,7 +370,6 @@ footer .footer .footer__nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 0px;
   width: 100%;
 }
 footer .footer .footer__nav .nav__link {
