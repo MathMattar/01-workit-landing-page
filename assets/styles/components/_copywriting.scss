@@ -67,3 +67,28 @@ main {
     }
   }
 }
+
+@include responsive("phone", max) {
+  main {
+    .copywriting {
+      gap: 40px;
+      padding: unset;
+
+      .copywriting__item {
+        display: flex;
+
+        .copywriting__id {
+          margin: unset;
+        }
+
+        .copywriting__title {
+          text-align: center;
+        }
+
+        .copywriting__description {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

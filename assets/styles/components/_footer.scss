@@ -28,3 +28,9 @@ footer {
     }
   }
 }
+
+@include responsive("phone", max) {
+  footer {
+    margin-bottom: 64px;
+  }
+}

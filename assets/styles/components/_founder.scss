@@ -26,7 +26,7 @@ main {
 
       &:after {
         content: '';
-        @include background('../images/background-pattern-1.svg', bottom right, cover);
+        @include background('../images/background-pattern-1.svg', bottom right);
         @include index(4, absolute, $right: 72.7px);
         width: 220.30px;
         height: 211.45px;
@@ -56,8 +56,6 @@ main {
 
       .founder__photo {
         height: 281px;
-
-        img {}
       }
 
       .founder__content {
@@ -82,6 +80,42 @@ main {
           font-size: 16px;
           letter-spacing: -0.16px;
           padding: 9.5px 22.09px;
+        }
+      }
+    }
+  }
+}
+
+@include responsive("phone", max) {
+  main {
+    .founder {
+      max-width: 350px;
+      max-height: 610px;
+
+      .founder__photo {
+        left: 50%;
+        transform: translate(-50%);
+
+        img {}
+      }
+
+      .founder__content {
+        @include display($direction: column, $items: center);
+        padding: 32px 31px;
+
+        &:after {
+          display: none;
+        }
+
+        .content__title {
+          font-size: 32px;
+          line-height: 48px;
+          text-align: center;
+        }
+
+        .content__description {
+          text-align: center;
+          padding: 16px 0 24px;
         }
       }
     }

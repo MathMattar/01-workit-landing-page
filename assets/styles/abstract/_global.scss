@@ -10,6 +10,14 @@ body {
   background-color: $white;
   width: 100%;
 
+  .button {
+    @include button;
+
+    &:hover {
+      @include hover;
+    }
+  }
+
   .smartphone {
     @include index(2, $top: 50%);
     @include display ($justify: center);
@@ -21,27 +29,21 @@ body {
     }
   }
 
+  main {
+    @include display (column, $items: center, $gap: 15.55em);
+    padding: 17.80% 161px 4.2% 171px;
+  }
+
   &:before {
     content: '';
-    @include background('../images/background-main.svg', $size: 100%);
+    @include background('../images/background-main.svg');
     @include index(0, $top: 490px);
     width: 100%;
     height: 110%;
   }
+
 }
 
-.button {
-  @include button;
-
-  &:hover {
-    @include hover;
-  }
-}
-
-main {
-  @include display (column, $items: center, $gap: 15.55em);
-  padding: 17.80% 161px 4.2% 171px;
-}
 
 
 @include responsive("tablet", max) {
@@ -50,24 +52,37 @@ main {
 
     .smartphone {
       top: 392px;
-      width: 100%;
       height: 28.9vh;
-
-      img {
-        height: 100%;
-      }
-    }
-
-    &:before {
-      content: '';
-      @include background('../images/background-main.svg', $size: cover);
-      @include index(0, $top: 405px);
-      height: 89.9vh;
     }
 
     main {
       padding: 203.75px 40px 80px;
       gap: 205px;
+    }
+
+    &:before {
+      background-size: cover;
+      top: 405px;
+      height: 89.9vh;
+    }
+  }
+}
+
+@include responsive("phone", max) {
+  body {
+    .smartphone {
+      top: 389px;
+      height: 23vh;
+    }
+
+    main {
+      padding: 155.3px 16px 74px;
+      gap: 172px;
+    }
+
+    &:before {
+      top: 392px;
+      height: 131.8vh;
     }
   }
 }
