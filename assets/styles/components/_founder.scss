@@ -90,18 +90,18 @@ main {
   main {
     .founder {
       max-width: 350px;
-      max-height: 610px;
+      max-height: 620px;
+      min-height: 605px;
 
       .founder__photo {
         left: 50%;
         transform: translate(-50%);
-
-        img {}
       }
 
       .founder__content {
         @include display($direction: column, $items: center);
         padding: 32px 31px;
+        min-height: 375px;
 
         &:after {
           display: none;

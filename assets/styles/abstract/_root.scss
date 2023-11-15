@@ -140,8 +140,8 @@ $eucaplyptus: rgb(68, 255, 161);
 }
 
 $breakpoints: (
-  "phone": 450px,
-  "tablet": 1025px,
+  "phone": 765px,
+  "tablet": 1370px,
 );
 
 @mixin responsive ($width, $type: min) {

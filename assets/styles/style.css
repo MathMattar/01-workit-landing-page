@@ -30,19 +30,6 @@ body .button:hover {
   background-color: transparent;
   color: rgb(68, 255, 161);
 }
-body .smartphone {
-  z-index: 2;
-  position: absolute;
-  top: 50%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-  height: 49vh;
-}
-body .smartphone img {
-  height: 100%;
-}
 body main {
   display: flex;
   flex-direction: column;
@@ -62,13 +49,9 @@ body:before {
   height: 110%;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1369px) {
   body {
     font-size: 16px;
-  }
-  body .smartphone {
-    top: 392px;
-    height: 28.9vh;
   }
   body main {
     padding: 203.75px 40px 80px;
@@ -77,21 +60,20 @@ body:before {
   body:before {
     background-size: cover;
     top: 405px;
+    min-height: 920px;
+    max-height: 1000px;
     height: 89.9vh;
   }
 }
-@media only screen and (max-width: 449px) {
-  body .smartphone {
-    top: 389px;
-    height: 23vh;
-  }
+@media only screen and (max-width: 764px) {
   body main {
     padding: 155.3px 16px 74px;
     gap: 172px;
   }
   body:before {
     top: 392px;
-    height: 131.8vh;
+    min-height: 900px;
+    max-height: 1070px;
   }
 }
 header {
@@ -103,33 +85,32 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 58px;
   height: 81.112vh;
-  padding: 56px 165px 316px 165.35px;
+  padding: 56px 165px 0;
 }
 header:before {
   content: "";
   background: url("../images/background-pattern-1.svg") no-repeat;
-  background-position: center;
+  background-position: right;
   background-size: cover;
   z-index: 2;
   position: absolute;
   top: 12.9%;
   right: 86%;
-  width: 340px;
-  height: 320px;
+  width: 14.2%;
+  height: 43.85%;
 }
 header:after {
   content: "";
   background: url("../images/background-pattern-2.svg") no-repeat;
-  background-position: 48px;
+  background-position: left;
   background-size: cover;
   z-index: 2;
   position: absolute;
   top: 34.9%;
-  left: 87.85%;
-  width: 175px;
-  height: 180px;
+  left: 91.1%;
+  width: 8.95%;
+  height: 24.68%;
 }
 header .header__nav {
   display: flex;
@@ -155,6 +136,7 @@ header .header__call-to-action {
   align-items: center;
   gap: 37px;
   width: 100%;
+  margin: 58px 0 50px;
 }
 header .header__call-to-action .call-to-action__title {
   font-family: "Fraunces 144pt", serif;
@@ -173,15 +155,44 @@ header .header__call-to-action .call-to-action__title .call-to-action__title--hi
 header .header__call-to-action .call-to-action__button {
   padding: 11px 30.6px 14px;
 }
+header .smartphone {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  height: 49vh;
+}
+header .smartphone img {
+  height: 100%;
+}
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1369px) {
   header {
     height: 52.75vh;
-    padding: 32px 40px 203.25px;
+    min-height: 540px;
+    max-height: 600px;
+    gap: 56px;
+    padding: 32px 40px 0;
+  }
+  header:before {
+    top: 6.95%;
+    right: calc(100% - 113px);
+  }
+  header:after {
+    top: 30.67%;
+    left: calc(100% - 82px);
+    width: 82px;
   }
   header .header__nav .nav__link {
     letter-spacing: -0.16px;
     text-underline-offset: 4px;
+  }
+  header .header__call-to-action {
+    max-width: 440px;
+    gap: 39px;
+    margin: unset;
   }
   header .header__call-to-action .call-to-action__title {
     font-size: 60px;
@@ -194,11 +205,16 @@ header .header__call-to-action .call-to-action__button {
     letter-spacing: -0.16px;
     padding: 9.5px 21.9px;
   }
+  header .smartphone {
+    height: 28.9vh;
+    min-height: 295px;
+  }
 }
-@media only screen and (max-width: 449px) {
+@media only screen and (max-width: 764px) {
   header {
-    padding: 32px 16px 156.7px;
+    padding: 32px 16px 0;
     height: 59.35vh;
+    min-height: 481px;
     gap: 64px;
   }
   header:before {
@@ -215,6 +231,10 @@ header .header__call-to-action .call-to-action__button {
   }
   header .header__call-to-action .call-to-action__title .call-to-action__title--highlight {
     text-underline-offset: 6.25px;
+  }
+  header .smartphone {
+    height: 22.66vh;
+    min-height: 184px;
   }
 }
 main .copywriting {
@@ -256,7 +276,7 @@ main .copywriting .copywriting__item .copywriting__description {
   text-align: center;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1369px) {
   main .copywriting {
     gap: 48px;
     padding: 0 57px;
@@ -288,7 +308,7 @@ main .copywriting .copywriting__item .copywriting__description {
     text-align: start;
   }
 }
-@media only screen and (max-width: 449px) {
+@media only screen and (max-width: 764px) {
   main .copywriting {
     gap: 40px;
     padding: unset;
@@ -359,7 +379,7 @@ main .founder .founder__content .content__button {
   padding: 11px 23.5px 14px;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1369px) {
   main .founder {
     max-width: 690px;
     max-height: 530px;
@@ -388,10 +408,11 @@ main .founder .founder__content .content__button {
     padding: 9.5px 22.09px;
   }
 }
-@media only screen and (max-width: 449px) {
+@media only screen and (max-width: 764px) {
   main .founder {
     max-width: 350px;
-    max-height: 610px;
+    max-height: 620px;
+    min-height: 605px;
   }
   main .founder .founder__photo {
     left: 50%;
@@ -402,6 +423,7 @@ main .founder .founder__content .content__button {
     flex-direction: column;
     align-items: center;
     padding: 32px 31px;
+    min-height: 375px;
   }
   main .founder .founder__content:after {
     display: none;
@@ -447,7 +469,7 @@ footer .footer .footer__nav .nav__link svg:hover path {
   fill: rgb(36, 5, 62);
 }
 
-@media only screen and (max-width: 449px) {
+@media only screen and (max-width: 764px) {
   footer {
     margin-bottom: 64px;
   }

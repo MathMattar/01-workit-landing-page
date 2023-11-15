@@ -3,24 +3,24 @@
 header {
   @include background ('../images/background-header.svg');
   @include index(1, relative);
-  @include display (column, $items: center, $gap: 58px);
+  @include display (column, $items: center);
   height: 81.112vh;
-  padding: 56px 165px 316px 165.35px;
+  padding: 56px 165px 0;
 
   &:before {
     content: '';
-    @include background('../images/background-pattern-1.svg');
+    @include background('../images/background-pattern-1.svg', right);
     @include index(2, $top: 12.9%, $right: 86%);
-    width: 340px;
-    height: 320px;
+    width: 14.2%;
+    height: 43.85%;
   }
 
   &:after {
     content: '';
-    @include background ('../images/background-pattern-2.svg', 48px);
-    @include index(2, $top: 34.9%, $left: 87.85%);
-    width: 175px;
-    height: 180px;
+    @include background ('../images/background-pattern-2.svg', left);
+    @include index(2, $top: 34.9%, $left: 91.1%);
+    width: 8.95%;
+    height: 24.68%;
   }
 
   .header__nav {
@@ -40,6 +40,7 @@ header {
   .header__call-to-action {
     @include display($direction: column, $items: center, $gap: 37px);
     width: 100%;
+    margin: 58px 0 50px;
 
     .call-to-action__title {
       @include large-heading;
@@ -54,12 +55,37 @@ header {
     }
   }
 
+  .smartphone {
+    @include display($justify: center);
+    @include index(2, relative);
+    width: 100%;
+    height: 49vh;
+
+    img {
+      height: 100%;
+    }
+  }
+
 }
 
 @include responsive("tablet", max) {
   header {
     height: 52.75vh;
-    padding: 32px 40px 203.25px;
+    min-height: 540px;
+    max-height: 600px;
+    gap: 56px;
+    padding: 32px 40px 0;
+
+    &:before {
+      top: 6.95%;
+      right: calc(100% - 113px);
+    }
+
+    &:after {
+      top: 30.67%;
+      left: calc(100% - 82px);
+      width: 82px;
+    }
 
     .header__nav {
       .nav__link {
@@ -69,6 +95,10 @@ header {
     }
 
     .header__call-to-action {
+      max-width: 440px;
+      gap: 39px;
+      margin: unset;
+
       .call-to-action__title {
         font-size: 60px;
 
@@ -83,13 +113,19 @@ header {
         padding: 9.5px 21.9px;
       }
     }
+
+    .smartphone {
+      height: 28.9vh;
+      min-height: 295px;
+    }
   }
 }
 
 @include responsive("phone", max) {
   header {
-    padding: 32px 16px 156.7px;
+    padding: 32px 16px 0;
     height: 59.35vh;
+    min-height: 481px;
     gap: 64px;
 
     &:before {
@@ -99,7 +135,6 @@ header {
     &:after {
       display: none;
     }
-
 
     .header__call-to-action {
       gap: 40px;
@@ -111,6 +146,11 @@ header {
           text-underline-offset: 6.25px;
         }
       }
+    }
+
+    .smartphone {
+      height: 22.66vh;
+      min-height: 184px;
     }
   }
 }
