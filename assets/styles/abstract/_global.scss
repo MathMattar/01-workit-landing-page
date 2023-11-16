@@ -20,7 +20,7 @@ body {
 
   main {
     @include display (column, $items: center);
-    padding: 17.80% 161px 4.2% 171px;
+    padding: 17.80% 161px 121px 171px;
   }
 
   &:before {
