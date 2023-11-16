@@ -141,6 +141,7 @@ header .header__call-to-action .call-to-action__title {
   font-family: "Fraunces 144pt", serif;
   font-size: 80px;
   line-height: 1;
+  font-weight: 600;
   text-align: center;
   color: rgb(255, 255, 255);
 }
@@ -255,6 +256,7 @@ main .copywriting .copywriting__item .copywriting__id {
   font-family: "Fraunces 144pt", serif;
   font-size: 24px;
   line-height: 40px;
+  font-weight: 600;
   text-align: center;
   color: rgb(36, 5, 62);
   border: 1px solid rgb(88, 77, 98);
@@ -265,6 +267,7 @@ main .copywriting .copywriting__item .copywriting__title {
   font-family: "Fraunces 144pt", serif;
   font-size: 32px;
   line-height: 40px;
+  font-weight: 600;
   text-align: center;
   color: rgb(36, 5, 62);
   padding: 56px 0 28px;
@@ -366,6 +369,7 @@ main .founder .founder__content .content__title {
   font-family: "Fraunces 144pt", serif;
   font-size: 56px;
   line-height: 64px;
+  font-weight: 600;
   color: rgb(255, 255, 255);
 }
 main .founder .founder__content .content__description {
