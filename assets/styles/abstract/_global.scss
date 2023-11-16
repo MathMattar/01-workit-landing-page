@@ -9,6 +9,7 @@ body {
   @include text;
   background-color: $white;
   width: 100%;
+  overflow-x: hidden;
 
   .button {
     @include button;
