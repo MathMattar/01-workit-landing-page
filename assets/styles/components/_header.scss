@@ -39,7 +39,7 @@ header {
 
   .header__call-to-action {
     @include display($direction: column, $items: center, $gap: 37px);
-    width: 100%;
+    width: 700px;
     margin: 58px 0 50px;
 
     .call-to-action__title {
