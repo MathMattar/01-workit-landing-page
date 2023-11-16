@@ -6,6 +6,7 @@ main {
     @include display(row, $wrap: wrap, $justify: space-between);
     width: 100%;
     max-width: 1440px;
+    margin-bottom: 170px;
 
 
     .copywriting__item {

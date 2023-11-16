@@ -19,7 +19,7 @@ body {
   }
 
   main {
-    @include display (column, $items: center, $gap: 15.55em);
+    @include display (column, $items: center);
     padding: 17.80% 161px 4.2% 171px;
   }
 
