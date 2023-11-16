@@ -26,25 +26,16 @@ Os usuarios devem ser capazes de:
 
 ### Captura de tela
 
-<figure style="display: flex; flex-direction:column; align-items: center; gap: 50px;">
-<div style="display: flex; flex-direction: column; align-items: center; gap: 10px">
-<img src="./assets/presentation/mobile.png" alt="Captura de tela mobile" width="375">
-<figcaption style="font-size: 18px; font-weight: bold;">Mobile</figcaption>
-</div>
-<div class="screenshot-container">
-<img src="./assets/presentation/tablet.png" alt="Captura de tela tablet" width="768">
-<figcaption>Tablet</figcaption>
-</div>
+<figure>
 <div class="screenshot-container">
 <img src="./assets/presentation/desktop.png" alt="Captura de tela desktop" width="1440">
 <figcaption>Desktop</figcaption>
-</div>
 </figure>
 
 ### Link
 
-[Site](https://01-workit-landing-page-ktb1itykm-mathmattar.vercel.app)
-[Solução](https://www.frontendmentor.io/solutions/workit-landing-page-t7VrHRZzuw)
+- [Site](https://01-workit-landing-page-ktb1itykm-mathmattar.vercel.app)
+- [Solução](https://www.frontendmentor.io/solutions/workit-landing-page-t7VrHRZzuw)
 
 ## Processo
 
@@ -67,11 +58,9 @@ Explorando uma marcação HTML semântica, adotei classes nomeadas em conformida
 
 ### Autor
 
-<div style="display: flex; gap: 25px; justify-content: center;">
 <a href="https://www.linkedin.com/in/mathewsmattar/" target="_blank">
   <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mathewsmattar/">
 </a>
 <a href="mailto:mathmattar@hotmail.com" target="_blank">
   <img src="https://img.shields.io/badge/Microsoft_Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white">
 </a>
-</div>
