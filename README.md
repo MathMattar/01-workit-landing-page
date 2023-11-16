@@ -26,10 +26,10 @@ Os usuarios devem ser capazes de:
 
 ### Captura de tela
 
-<figure>
-<div class="screenshot-container">
+<figure style="display: flex; flex-direction:column; align-items: center; gap: 50px;">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 10px">
 <img src="./assets/presentation/mobile.png" alt="Captura de tela mobile" width="375">
-<figcaption>Mobile</figcaption>
+<figcaption style="font-size: 18px; font-weight: bold;">Mobile</figcaption>
 </div>
 <div class="screenshot-container">
 <img src="./assets/presentation/tablet.png" alt="Captura de tela tablet" width="768">
@@ -43,7 +43,8 @@ Os usuarios devem ser capazes de:
 
 ### Link
 
-[Workit](https://01-workit-landing-page-ktb1itykm-mathmattar.vercel.app)
+[Site](https://01-workit-landing-page-ktb1itykm-mathmattar.vercel.app)
+[Solução](https://www.frontendmentor.io/solutions/workit-landing-page-t7VrHRZzuw)
 
 ## Processo
 
@@ -66,7 +67,7 @@ Explorando uma marcação HTML semântica, adotei classes nomeadas em conformida
 
 ### Autor
 
-<div class="badge">
+<div style="display: flex; gap: 25px; justify-content: center;">
 <a href="https://www.linkedin.com/in/mathewsmattar/" target="_blank">
   <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mathewsmattar/">
 </a>
@@ -74,30 +75,3 @@ Explorando uma marcação HTML semântica, adotei classes nomeadas em conformida
   <img src="https://img.shields.io/badge/Microsoft_Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white">
 </a>
 </div>
-
-<style>
-  figure {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
-  }
-
-  .screenshot-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px
-  }
-
-  figcaption {
-    font-size: 18px;
-    font-weight: bold;
-  }
-
-  .badge {
-display: flex;
-gap: 25px;
-justify-content: center;
-  }
-</style>
